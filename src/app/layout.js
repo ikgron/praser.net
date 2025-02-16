@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://praser.net; child-src 'self' https://praser.net; connect-src 'self' https://praser.net;"
         />
+
       </head>
       <body className='body'>
         <Navbar />

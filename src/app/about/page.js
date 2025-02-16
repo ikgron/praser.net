@@ -27,7 +27,7 @@ export default function About() {
       <div className={styles.links}>
         <h1>About This Site</h1>
         <div style={{ marginTop: '3vh' }}>
-          <Link href='https://codeberg.org/parser/praser' target="_blank">Source Code</Link>
+          <Link href='https://codeberg.org/parser/praser.net' target="_blank">Source Code</Link>
         </div>
         <div style={{ marginTop: '3vh' }}>
           <Link href='https://developer.mozilla.org/en-US/observatory/analyze?host=praser.net' target="_blank">Security</Link>

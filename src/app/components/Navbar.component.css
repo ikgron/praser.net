@@ -31,15 +31,12 @@
     margin: 0.5rem;
 }
 
-.title:hover,
-.nav-links a:hover {
-    color: blue;
-    text-decoration: underline;
-}
-
-.title:active
-.nav-links a:active {
-    color: white;
+@media (hover: hover) {
+    .title:hover,
+    .nav-links a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
 }
 
 @media (max-width: 800px) {
