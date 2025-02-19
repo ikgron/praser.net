@@ -19,6 +19,7 @@
     text-align: center;
     background: black;
     transition: border 0.3s ease-in-out;
+    user-select: none;
 }
 
 .portfolioInfo h1 {

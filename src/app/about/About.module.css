@@ -11,4 +11,5 @@
     margin-left: 1rem;
     margin-right: 1rem;
     filter: invert(1);
+    user-select: none;
 }

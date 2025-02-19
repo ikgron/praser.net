@@ -4,12 +4,13 @@
     height: 16rem;
     border: 1px solid white;
     resize: none;
-    cursor: default;
+    cursor: auto;
     font-size: large;
     padding: 0.5rem;
     width: 100%;
     outline: none;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .bttn:focus,

@@ -3,6 +3,7 @@
     width: 100%;
     border-bottom: 2px solid blue;
     flex-wrap: wrap;
+    user-select: none;
 }
 
 .logo-image {
