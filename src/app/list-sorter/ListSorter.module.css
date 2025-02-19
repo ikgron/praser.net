@@ -12,9 +12,11 @@
     box-sizing: border-box;
 }
 
+.bttn:focus,
+.listButton:focus,
+.formSelect:focus,
 .textarea:focus {
     outline: none;
-    border: 1px solid white;
 }
 
 .textarea[readonly] {
