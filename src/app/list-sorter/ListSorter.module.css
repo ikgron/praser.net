@@ -33,7 +33,6 @@
 }
 
 @media (hover: hover) {
-
     .bttn:hover,
     .formSelect:hover {
         color: black;
@@ -53,7 +52,8 @@
 
 .bttn,
 .listButton,
-.formSelect {
+.formSelect,
+.textarea {
     font-family: 'Aldrich Regular';
     src: url('/fonts/Aldrich-Regular.ttf');
 }
