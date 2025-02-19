@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import '@/app/globals.css';
 import styles from './portfolio.module.css';
 
 export default function Portfolio() {

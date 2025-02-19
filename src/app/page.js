@@ -5,7 +5,7 @@ export default function Home() {
       <title>Home | Praser</title>
 
       <h1>Home</h1>
-      <p>A fine website by ikgron.</p>
+      <p>A fine website.</p>
 
     </div>
   );
