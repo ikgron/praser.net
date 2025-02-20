@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
 
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://praser.net; child-src 'self' https://praser.net; connect-src 'self' https://praser.net;"
+          content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://praser.net https://praser.pages.dev; child-src 'self' https://praser.net https://praser.pages.dev; connect-src 'self' https://praser.net https://praser.pages.dev;"
         />
 
       </head>
