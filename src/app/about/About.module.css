@@ -1,15 +1,15 @@
 .links {
-    text-align: center;
-    margin-top: 20px;
-    font-size: larger;
-    font-size: larger;
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+  font-size: larger;
 }
 
 .icon {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    filter: invert(1);
-    user-select: none;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  filter: invert(1);
+  user-select: none;
 }

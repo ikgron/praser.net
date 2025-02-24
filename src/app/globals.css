@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Aldrich Regular';
-  src: url('/fonts/Aldrich-Regular.ttf');
+  font-family: "Aldrich Regular";
+  src: url("/fonts/Aldrich-Regular.ttf");
 }
 
 body {
-  font-family: 'Aldrich Regular', monospace;
+  font-family: "Aldrich Regular", monospace;
   background-color: black;
   color: white;
 }
@@ -12,7 +12,6 @@ body {
 .header {
   text-align: center;
 }
-
 
 h1 {
   font-size: xx-large;

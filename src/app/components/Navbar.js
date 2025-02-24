@@ -1,6 +1,7 @@
-import './Navbar.component.css';
-import '@/app/globals.css';
-import Link from 'next/link';
+import Link from "next/link";
+
+import "./Navbar.component.css";
+import "@/app/globals.css";
 
 export default function Navbar() {
   return (
@@ -17,7 +18,7 @@ export default function Navbar() {
         <Link href="/portfolio">Portfolio</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/more">More</Link>
-        </div>
+      </div>
     </nav>
   );
 }

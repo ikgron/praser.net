@@ -1,12 +1,12 @@
-import styles from './Tools.module.css';
-import '@/app/globals.css';
-import Link from 'next/link';
+import Link from "next/link";
+
+import styles from "./Tools.module.css";
+import "@/app/globals.css";
 
 export default function Tools() {
   return (
     <div className="header">
-
-    <title>More | Praser</title>
+      <title>More | Praser</title>
 
       <h1>More</h1>
 
@@ -15,7 +15,6 @@ export default function Tools() {
           List Sorter
         </Link>
       </div>
-
     </div>
   );
 }

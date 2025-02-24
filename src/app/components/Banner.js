@@ -1,14 +1,14 @@
 "use client";
+import React, { useEffect, useState } from "react";
 
-import './Banner.component.css';
-import '@/app/globals.css';
-import React, { useEffect, useState } from 'react';
+import "./Banner.component.css";
+import "@/app/globals.css";
 
 const CookieFooter = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const acknowledged = localStorage.getItem('footerAcknowledged');
+    const acknowledged = localStorage.getItem("footerAcknowledged");
     if (!acknowledged) {
       setIsVisible(true);
     }
@@ -16,7 +16,7 @@ const CookieFooter = () => {
 
   const hideFooter = () => {
     setIsVisible(false); // Hide footer
-    localStorage.setItem('footerAcknowledged', 'true');
+    localStorage.setItem("footerAcknowledged", "true");
   };
 
   return (

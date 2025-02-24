@@ -1,25 +1,33 @@
-'use client';
-import { useState, useEffect } from 'react';
-import '@/app/globals.css';
-import styles from './ListSorter.module.css';
+"use client";
+import { useState, useEffect } from "react";
+
+import styles from "./ListSorter.module.css";
+import "@/app/globals.css";
 
 const ListSorter = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [sortedItems, setSortedItems] = useState([]);
   const [reverse, setReverse] = useState(false);
-  const [sortMethod, setSortMethod] = useState('alphabetical');
-  const [delimiter, setDelimiter] = useState('\n');
-  const [copyButtonText, setCopyButtonText] = useState('Copy');
+  const [sortMethod, setSortMethod] = useState("alphabetical");
+  const [delimiter, setDelimiter] = useState("\n");
+  const [copyButtonText, setCopyButtonText] = useState("Copy");
 
   const handleSort = () => {
-    let items = inputValue.split(delimiter).map((item) => item.trim()).filter((item) => item !== '');
+    let items = inputValue
+      .split(delimiter)
+      .map((item) => item.trim())
+      .filter((item) => item !== "");
 
-    if (sortMethod === 'alphabetical') {
+    if (sortMethod === "alphabetical") {
       items.sort((a, b) => a.localeCompare(b));
-    } else if (sortMethod === 'length') {
+    } else if (sortMethod === "length") {
       items.sort((a, b) => a.length - b.length);
-    } else if (sortMethod === 'numerical') {
-      items.sort((a, b) => parseFloat(a.replace(/[^0-9.]/g, '')) - parseFloat(b.replace(/[^0-9.]/g, '')));
+    } else if (sortMethod === "numerical") {
+      items.sort(
+        (a, b) =>
+          parseFloat(a.replace(/[^0-9.]/g, "")) -
+          parseFloat(b.replace(/[^0-9.]/g, "")),
+      );
     }
 
     if (reverse) {
@@ -34,28 +42,28 @@ const ListSorter = () => {
   };
 
   const handleClearInput = () => {
-    setInputValue('');
+    setInputValue("");
     handleSort();
   };
 
   const handleCopyOutput = () => {
-    const outputElement = document.getElementById('output');
+    const outputElement = document.getElementById("output");
     outputElement.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     outputElement.blur();
-    setCopyButtonText('Copied!');
+    setCopyButtonText("Copied!");
     setTimeout(() => {
-      setCopyButtonText('Copy');
+      setCopyButtonText("Copy");
     }, 2000);
   };
 
   useEffect(() => {
-    if (inputValue.includes('\n')) {
-      setDelimiter('\n');
-    } else if (inputValue.includes(';')) {
-      setDelimiter(';');
-    } else if (inputValue.includes(',')) {
-      setDelimiter(',');
+    if (inputValue.includes("\n")) {
+      setDelimiter("\n");
+    } else if (inputValue.includes(";")) {
+      setDelimiter(";");
+    } else if (inputValue.includes(",")) {
+      setDelimiter(",");
     }
     handleSort();
   }, [inputValue, sortMethod, reverse]);
@@ -64,7 +72,10 @@ const ListSorter = () => {
     <>
       <title>List Sorter | Praser</title>
 
-      <div className="row" style={{ maxWidth: '80%', margin: '0 auto', marginTop: '3rem' }}>
+      <div
+        className="row"
+        style={{ maxWidth: "80%", margin: "0 auto", marginTop: "3rem" }}
+      >
         <div>
           <h2>Input</h2>
           <div id="inputContainer">
@@ -75,7 +86,7 @@ const ListSorter = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <div style={{ textAlign: 'left' }}>
+            <div style={{ textAlign: "left" }}>
               <label htmlFor="sortMethod">
                 <select
                   id="sortMethod"
@@ -100,7 +111,7 @@ const ListSorter = () => {
           </div>
         </div>
 
-        <div style={{marginTop: '3rem'}}>
+        <div style={{ marginTop: "3rem" }}>
           <h2>Output</h2>
           <div id="outputContainer">
             <textarea
@@ -108,13 +119,15 @@ const ListSorter = () => {
               className={`${styles.textarea} form-control placeholder1`}
               placeholder="Output appears here."
               readOnly
-              value={sortedItems.join(delimiter === '\n' ? '\n' : delimiter === ';' ? '; ' : ', ')}
+              value={sortedItems.join(
+                delimiter === "\n" ? "\n" : delimiter === ";" ? "; " : ", ",
+              )}
             />
-            <div style={{ textAlign: 'left', marginBottom: '3rem' }}>
+            <div style={{ textAlign: "left", marginBottom: "3rem" }}>
               <button
                 id="reverseButton"
                 type="button"
-                className={`${styles.listButton} ${styles.bttn} ${reverse ? styles.reverseActive : ''}`}
+                className={`${styles.listButton} ${styles.bttn} ${reverse ? styles.reverseActive : ""}`}
                 onClick={handleReverse}
               >
                 Reverse Output
