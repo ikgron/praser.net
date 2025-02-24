@@ -15,7 +15,7 @@ const CookieFooter = () => {
   }, []);
 
   const hideFooter = () => {
-    setIsVisible(false); // Hide footer
+    setIsVisible(false);
     localStorage.setItem("footerAcknowledged", "true");
   };
 
