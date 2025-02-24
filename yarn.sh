@@ -1,3 +1,15 @@
+# For installing yarn:
+#Enable Corepack:
+corepack enable
+
+# Update yarn to latest version:
+yarn set version stable
+yarn install
+
+# Upgrade dependencies across whole project:
+yarn up
+
+
 # Install dependencies:
 yarn install
 
@@ -10,9 +22,6 @@ yarn run deploy
 
 # Install Prettier locally:
 yarn add --dev --exact prettier
-
-# Create empty config file:
-node --eval "fs.writeFileSync('.prettierrc','{}\n')"
 
 # Format all files with Prettier:
 yarn prettier . --write
