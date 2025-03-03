@@ -1,19 +1,21 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ChangeEvent, useCallback } from 'react';
 
 import styles from './ListSorter.module.css';
 import '@/app/globals.css';
 
 const ListSorter = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [sortedItems, setSortedItems] = useState([]);
-  const [reverse, setReverse] = useState(false);
-  const [sortMethod, setSortMethod] = useState('alphabetical');
-  const [delimiter, setDelimiter] = useState('\n');
-  const [copyButtonText, setCopyButtonText] = useState('Copy');
+  const [inputValue, setInputValue] = useState<string>('');
+  const [sortedItems, setSortedItems] = useState<string[]>([]);
+  const [reverse, setReverse] = useState<boolean>(false);
+  const [sortMethod, setSortMethod] = useState<
+    'alphabetical' | 'length' | 'numerical'
+  >('alphabetical');
+  const [delimiter, setDelimiter] = useState<'\n' | ';' | ','>('\n');
+  const [copyButtonText, setCopyButtonText] = useState<string>('Copy');
 
-  const handleSort = () => {
-    let items = inputValue
+  const handleSort = useCallback(() => {
+    const items = inputValue
       .split(delimiter)
       .map((item) => item.trim())
       .filter((item) => item !== '');
@@ -35,10 +37,10 @@ const ListSorter = () => {
     }
 
     setSortedItems(items);
-  };
+  }, [inputValue, delimiter, sortMethod, reverse]);
 
   const handleReverse = () => {
-    setReverse(!reverse);
+    setReverse((prevReverse) => !prevReverse);
   };
 
   const handleClearInput = () => {
@@ -47,7 +49,9 @@ const ListSorter = () => {
   };
 
   const handleCopyOutput = () => {
-    const outputElement = document.getElementById('output');
+    const outputElement = document.getElementById(
+      'output'
+    ) as HTMLTextAreaElement;
     outputElement.select();
     document.execCommand('copy');
     outputElement.blur();
@@ -66,7 +70,7 @@ const ListSorter = () => {
       setDelimiter(',');
     }
     handleSort();
-  }, [inputValue, sortMethod, reverse]);
+  }, [inputValue, sortMethod, reverse, handleSort]);
 
   return (
     <>
@@ -88,7 +92,9 @@ const ListSorter = () => {
               className={`${styles.textarea} form-control placeholder1`}
               placeholder="Separate by commas, semicolons, or new lines."
               value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
+              onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                setInputValue(e.target.value)
+              }
             />
             <div
               style={{
@@ -99,7 +105,11 @@ const ListSorter = () => {
                 <select
                   id="sortMethod"
                   className={`${styles.formSelect} form-select-sm`}
-                  onChange={(e) => setSortMethod(e.target.value)}
+                  onChange={(e: ChangeEvent<HTMLSelectElement>) =>
+                    setSortMethod(
+                      e.target.value as 'alphabetical' | 'length' | 'numerical'
+                    )
+                  }
                   value={sortMethod}
                 >
                   <option value="alphabetical">Alphabetical</option>

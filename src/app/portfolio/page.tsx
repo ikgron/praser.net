@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './portfolio.module.css';
 import '@/app/globals.css';
 
-export default function Portfolio() {
+const Portfolio = () => {
   return (
     <div className="header">
       <title>Portfolio | Praser</title>
@@ -16,11 +17,13 @@ export default function Portfolio() {
         <div className={styles.portfolioGrid}>
           <div className={styles.portfolioItem}>
             <Link href="/list-sorter/">
-              <img
+              <Image
                 src="/images/sorter.png"
                 alt="Project 1"
                 loading="lazy"
                 className={styles.portfolioImage}
+                width={300}
+                height={300}
               />
               <div className={styles.portfolioInfo}>
                 <h1>List Sorter</h1>
@@ -32,24 +35,10 @@ export default function Portfolio() {
               </div>
             </Link>
           </div>
-
-          {/* placeholder
-                    <div className={styles.portfolioItem}>
-                        <Link href="/">
-                            <img
-                                src="/"
-                                alt="Project 2"
-                                loading="lazy"
-                                className={styles.portfolioImage}
-                            />
-                            <div className={styles.portfolioInfo}>
-                                <h1>FILL</h1>
-                                <p>FILL</p>
-                            </div>
-                        </Link>
-                    </div> */}
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Portfolio;

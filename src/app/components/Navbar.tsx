@@ -1,14 +1,21 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import './Navbar.component.css';
 import '@/app/globals.css';
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="logo">
         <Link href="/" className="title">
-          <img src="/images/penguin.png" className="logo-image" alt="icon" />
+          <Image
+            src="/images/penguin.png"
+            className="logo-image"
+            alt="icon"
+            width={50}
+            height={50}
+          />
           Praser
         </Link>
       </div>
@@ -21,4 +28,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-import styles from './Tools.module.css';
+import styles from './More.module.css';
 import '@/app/globals.css';
 
-export default function Tools() {
+const Tools = () => {
   return (
     <div className="header">
       <title>More | Praser</title>
@@ -17,4 +17,6 @@ export default function Tools() {
       </div>
     </div>
   );
-}
+};
+
+export default Tools;

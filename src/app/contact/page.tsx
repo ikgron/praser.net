@@ -1,7 +1,7 @@
-import styles from './Contact.module.css';
+// import styles from './Contact.module.css';
 import '@/app/globals.css';
 
-export default function Contact() {
+const Contact: React.FC = () => {
   return (
     <div className="header">
       <title>Contact | Praser</title>
@@ -12,4 +12,6 @@ export default function Contact() {
       </p>
     </div>
   );
-}
+};
+
+export default Contact;

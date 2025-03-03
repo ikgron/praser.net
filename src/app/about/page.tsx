@@ -1,9 +1,9 @@
 import Link from 'next/link';
-
+import Image from 'next/image';
 import styles from './About.module.css';
 import '@/app/globals.css';
 
-export default function About() {
+const About: React.FC = () => {
   return (
     <div>
       <title>About | Praser</title>
@@ -19,10 +19,12 @@ export default function About() {
             rel="noopener noreferrer"
             title="Codeberg"
           >
-            <img
+            <Image
               className={styles.icon}
               src="/images/codeberg.svg"
               alt="Codeberg Icon"
+              width={48}
+              height={48}
             />
           </a>
           <a
@@ -31,10 +33,12 @@ export default function About() {
             rel="noopener noreferrer"
             title="Github"
           >
-            <img
+            <Image
               className={styles.icon}
               src="/images/github.png"
               alt="Github Icon"
+              width={48}
+              height={48}
             />
           </a>
         </div>
@@ -66,4 +70,6 @@ export default function About() {
       </div>
     </div>
   );
-}
+};
+
+export default About;

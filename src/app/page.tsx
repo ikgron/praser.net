@@ -1,4 +1,6 @@
-export default function Home() {
+import React from 'react';
+
+const Home: React.FC = () => {
   return (
     <div className="header">
       <title>Home | Praser</title>
@@ -7,4 +9,6 @@ export default function Home() {
       <p>A fine website.</p>
     </div>
   );
-}
+};
+
+export default Home;

@@ -2,7 +2,11 @@ import './globals.css';
 import Navbar from '@/app/components/Navbar';
 import Banner from '@/app/components/Banner';
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -20,4 +24,6 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
