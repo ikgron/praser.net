@@ -58,8 +58,8 @@ yarn prettier . --write
 yarn prettier . --check
 ```
 
-
 ### Other
+
 ```bash
 yarn create next-app # Must have Yarn installed globally
 ```

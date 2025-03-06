@@ -1,8 +1,7 @@
 'use client';
 import { useState, useEffect, ChangeEvent, useCallback } from 'react';
 
-import styles from './ListSorter.module.css';
-import '@/app/globals.css';
+import styles from '@/styles/ListSorter.module.css';
 
 const ListSorter = () => {
   const [inputValue, setInputValue] = useState<string>('');

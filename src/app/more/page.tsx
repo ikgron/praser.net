@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
-import styles from './More.module.css';
-import '@/app/globals.css';
+import styles from '@/styles/More.module.css';
 
 const Tools = () => {
   return (
@@ -11,7 +9,7 @@ const Tools = () => {
       <h1>More</h1>
 
       <div>
-        <Link href="/list-sorter" className={styles.toolsButton}>
+        <Link href="/more/list-sorter" className={styles.toolsButton}>
           List Sorter
         </Link>
       </div>

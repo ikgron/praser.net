@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-import '@/app/globals.css';
-
 const NotFound: React.FC = () => {
   return (
     <div className="header">

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './About.module.css';
-import '@/app/globals.css';
+import styles from '@/styles/About.module.css';
 
 const About: React.FC = () => {
   return (

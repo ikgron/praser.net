@@ -1,17 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-import './Navbar.component.css';
-import '@/app/globals.css';
+import styles from '@/components/Navbar.module.css';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <Link href="/" className="title">
+    <nav className={styles.navbar}>
+      <div className={styles.logo}>
+        <Link href="/" className={styles.title}>
           <Image
             src="/images/penguin.png"
-            className="logo-image"
+            className={styles['logo-image']}
             alt="icon"
             width={50}
             height={50}
@@ -20,7 +18,7 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
 
-      <div className="nav-links">
+      <div className={styles['nav-links']}>
         <Link href="/about">About</Link>
         <Link href="/portfolio">Portfolio</Link>
         <Link href="/contact">Contact</Link>

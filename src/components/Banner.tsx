@@ -1,8 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-
-import './Banner.component.css';
-import '@/app/globals.css';
+import styles from '@/components/Banner.module.css';
 
 const CookieFooter: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -21,10 +19,14 @@ const CookieFooter: React.FC = () => {
 
   return (
     isVisible && (
-      <footer className="footer fixed-bottom text-center">
-        <div className="footer-content">
+      <footer className={styles['footer']}>
+        <div className={styles['footer-content']}>
           <p>This site doesn&apos;t use cookies. Why would it?</p>
-          <button id="cookie-button" type="button" onClick={hideFooter}>
+          <button
+            className={styles['cookie-button']}
+            type="button"
+            onClick={hideFooter}
+          >
             OK
           </button>
         </div>

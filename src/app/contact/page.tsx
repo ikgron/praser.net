@@ -1,6 +1,3 @@
-// import styles from './Contact.module.css';
-import '@/app/globals.css';
-
 const Contact: React.FC = () => {
   return (
     <div className="header">

@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-import styles from './portfolio.module.css';
-import '@/app/globals.css';
+import styles from '@/styles/portfolio.module.css';
 
 const Portfolio = () => {
   return (
@@ -16,7 +14,7 @@ const Portfolio = () => {
       <div className="container">
         <div className={styles.portfolioGrid}>
           <div className={styles.portfolioItem}>
-            <Link href="/list-sorter/">
+            <Link href="/more/list-sorter/">
               <Image
                 src="/images/sorter.png"
                 alt="Project 1"
