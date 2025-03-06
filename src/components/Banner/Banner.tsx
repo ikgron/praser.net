@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import styles from '@/components/Banner.module.css';
+import styles from '@/components//Banner/Banner.module.css';
 
 const CookieFooter: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);

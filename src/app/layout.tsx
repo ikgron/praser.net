@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
-import Navbar from '@/components/Navbar';
-import Banner from '@/components/Banner';
+import Navbar from '@/components/Navbar/Navbar';
+import Banner from '@/components/Banner/Banner';
 
 interface RootLayoutProps {
   children: React.ReactNode;
