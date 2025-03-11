@@ -1,0 +1,41 @@
+.footer {
+  background-color: black;
+  font-size: x-small;
+  position: fixed;
+  bottom: 0;
+  left: 50vw;
+  transform: translate(-50%);
+  text-align: center;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.cookie-button {
+  background-color: lightgray;
+  border: 2px outset grey;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.cookie-button:hover {
+  background-color: grey;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    width: 100%;
+  }
+}
