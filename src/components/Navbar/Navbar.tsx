@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/components/Navbar/Navbar.module.css';
 
 const Navbar: React.FC = () => {

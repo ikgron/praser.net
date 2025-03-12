@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/styles/portfolio.module.css';
 
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
   return (
     <div className="header">
       <title>Portfolio | Praser</title>

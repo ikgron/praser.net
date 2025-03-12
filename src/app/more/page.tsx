@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '@/styles/More.module.css';
 
-const Tools = () => {
+const Tools: React.FC = () => {
   return (
     <div className="header">
       <title>More | Praser</title>

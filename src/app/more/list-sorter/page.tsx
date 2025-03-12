@@ -1,9 +1,8 @@
 'use client';
 import { useState, useEffect, ChangeEvent, useCallback } from 'react';
-
 import styles from '@/styles/ListSorter.module.css';
 
-const ListSorter = () => {
+const ListSorter: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [sortedItems, setSortedItems] = useState<string[]>([]);
   const [reverse, setReverse] = useState<boolean>(false);
