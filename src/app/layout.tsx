@@ -12,10 +12,10 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <head>
         <link rel="icon" href="/images/favicon.ico" />
 
-        {/* <meta
+        <meta
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://praser.net https://praser.pages.dev; child-src 'self' https://praser.net https://praser.pages.dev; connect-src 'self' https://praser.net https://praser.pages.dev;"
-        /> */}
+        />
       </head>
       <body className="body">
         <Navbar />

@@ -6,13 +6,18 @@ const ListSorter: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [sortedItems, setSortedItems] = useState<string[]>([]);
   const [reverse, setReverse] = useState<boolean>(false);
-  const [sortMethod, setSortMethod] = useState<'alphabetical' | 'length' | 'numerical'>('alphabetical');
+  const [sortMethod, setSortMethod] = useState<
+    'alphabetical' | 'length' | 'numerical'
+  >('alphabetical');
   const [delimiter, setDelimiter] = useState<'\n' | ';' | ','>('\n');
   const [copyButtonText, setCopyButtonText] = useState<string>('Copy');
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const handleSort = useCallback(() => {
-    const items = inputValue.split(delimiter).map((item) => item.trim()).filter((item) => item !== '');
+    const items = inputValue
+      .split(delimiter)
+      .map((item) => item.trim())
+      .filter((item) => item !== '');
 
     if (sortMethod === 'alphabetical') {
       items.sort((a, b) => a.localeCompare(b));
@@ -41,7 +46,9 @@ const ListSorter: React.FC = () => {
   };
 
   const handleCopyOutput = async () => {
-    const outputElement = document.getElementById('output') as HTMLTextAreaElement;
+    const outputElement = document.getElementById(
+      'output'
+    ) as HTMLTextAreaElement;
     outputElement.select();
     try {
       await navigator.clipboard.writeText(outputElement.value);
@@ -80,10 +87,13 @@ const ListSorter: React.FC = () => {
   return (
     <>
       <title>List Sorter | Praser</title>
-      
+
       {/* Mobile Layout */}
       {isMobile ? (
-        <div className="row" style={{ maxWidth: '80%', margin: '0 auto', marginTop: '3rem' }}>
+        <div
+          className="row"
+          style={{ maxWidth: '80%', margin: '0 auto', marginTop: '3rem' }}
+        >
           <div>
             <h2>Input</h2>
             <div id="inputContainer">
@@ -92,7 +102,9 @@ const ListSorter: React.FC = () => {
                 className={`${styles.textarea} form-control placeholder1`}
                 placeholder="Separate by commas, semicolons, or new lines."
                 value={inputValue}
-                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setInputValue(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                  setInputValue(e.target.value)
+                }
               />
               <div style={{ textAlign: 'left' }}>
                 <label htmlFor="sortMethod">
@@ -100,7 +112,12 @@ const ListSorter: React.FC = () => {
                     id="sortMethod"
                     className={`${styles.formSelect} form-select-sm`}
                     onChange={(e: ChangeEvent<HTMLSelectElement>) =>
-                      setSortMethod(e.target.value as 'alphabetical' | 'length' | 'numerical')
+                      setSortMethod(
+                        e.target.value as
+                          | 'alphabetical'
+                          | 'length'
+                          | 'numerical'
+                      )
                     }
                     value={sortMethod}
                   >
@@ -174,7 +191,9 @@ const ListSorter: React.FC = () => {
                 className={`${styles.textarea} form-control placeholder1`}
                 placeholder="Separate by commas, semicolons, or new lines."
                 value={inputValue}
-                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setInputValue(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                  setInputValue(e.target.value)
+                }
               />
               <div style={{ textAlign: 'left' }}>
                 <label htmlFor="sortMethod">
@@ -182,7 +201,12 @@ const ListSorter: React.FC = () => {
                     id="sortMethod"
                     className={`${styles.formSelect} form-select-sm`}
                     onChange={(e: ChangeEvent<HTMLSelectElement>) =>
-                      setSortMethod(e.target.value as 'alphabetical' | 'length' | 'numerical')
+                      setSortMethod(
+                        e.target.value as
+                          | 'alphabetical'
+                          | 'length'
+                          | 'numerical'
+                      )
                     }
                     value={sortMethod}
                   >

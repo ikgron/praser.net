@@ -75,3 +75,8 @@ yarn dlx @yarnpkg/doctor
 ```bash
 yarn upgrade-interactive
 ```
+
+```bash
+export GPG_TTY=$(tty)
+source ~/.bashrc
+```
