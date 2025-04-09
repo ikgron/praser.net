@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
             alt="icon"
             width={50}
             height={50}
+            priority
           />
           Praser
         </Link>
