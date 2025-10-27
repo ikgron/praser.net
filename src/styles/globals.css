@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Aldrich Regular";
+  src: url("/fonts/Aldrich-Regular.ttf");
+}
+
+body {
+  font-family: "Aldrich Regular", monospace;
+  background-color: black;
+  color: white;
+}
+
+.header {
+  text-align: center;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2,
+p {
+  font-size: large;
+}
+
+.Link,
+a {
+  color: blue;
+}
+
+html {
+  ::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+  }
+
+  -ms-overflow-style: none;
+  /* IE, Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

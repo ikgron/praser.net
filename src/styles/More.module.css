@@ -1,0 +1,21 @@
+.toolsButton {
+  display: inline-block;
+  background-color: black;
+  color: blue;
+  font-size: larger;
+  padding: 2rem;
+  border: 2px solid blue;
+  border-radius: 5px;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    background-color 0.3s;
+  text-decoration: none;
+  user-select: none;
+}
+
+.toolsButton:hover {
+  color: black;
+  border: 2px solid blue;
+  background-color: blue;
+}

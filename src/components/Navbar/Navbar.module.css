@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid blue;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-size: x-large;
+}
+
+.nav-links {
+  font-size: large;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title,
+.nav-links,
+.nav-links a {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin: 0.5rem;
+}
+
+@media (hover: hover) {
+  .title:hover,
+  .nav-links a:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+}

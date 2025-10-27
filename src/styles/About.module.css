@@ -1,0 +1,12 @@
+.links {
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+}
+
+.icon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  filter: invert(1);
+  user-select: none;
+}

@@ -1,0 +1,90 @@
+.textarea {
+  background-color: black;
+  color: white;
+  height: 18rem;
+  border: 1px solid white;
+  resize: none;
+  cursor: auto;
+  font-size: large;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.bttn:focus,
+.listButton:focus,
+.formSelect:focus,
+.textarea:focus {
+  outline: none;
+}
+
+.textarea[readonly] {
+  caret-color: transparent;
+  cursor: default;
+}
+
+.bttn {
+  background-color: black;
+  color: blue;
+  font-size: large;
+  border: 2px solid blue;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    background-color 0.3s;
+}
+
+@media (hover: hover) {
+  .bttn:hover,
+  .formSelect:hover {
+    color: black;
+    border: 2px solid blue;
+    background-color: blue;
+    cursor: pointer;
+  }
+}
+
+.listButton,
+.formSelect {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.bttn,
+.listButton,
+.formSelect,
+.textarea {
+  font-family: "Aldrich Regular", monospace;
+}
+
+.placeholder1::placeholder {
+  color: #999;
+}
+
+.formSelect {
+  background-color: black;
+  color: blue;
+  font-size: large;
+  height: 3rem;
+  border: 2px solid blue;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    background-color 0.3s;
+}
+
+.reverseActive {
+  background-color: blue;
+  color: black;
+  border: 2px solid blue;
+}
