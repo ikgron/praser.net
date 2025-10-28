@@ -22,7 +22,6 @@ const Navbar: React.FC = () => {
       <div className={styles["nav-links"]}>
         <Link href="/about">About</Link>
         <Link href="/portfolio">Portfolio</Link>
-        <Link href="/contact">Contact</Link>
         <Link href="/more">More</Link>
       </div>
     </nav>
